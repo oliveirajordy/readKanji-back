@@ -1,0 +1,21 @@
+{
+  "name": "readkanji-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "kuromoji": "^0.1.2",
+    "kuroshiro": "^1.1.2",
+    "kuroshiro-analyzer-kuromoji": "^1.1.0",
+    "nodemon": "^1.19.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
