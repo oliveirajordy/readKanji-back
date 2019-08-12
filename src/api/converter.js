@@ -20,8 +20,8 @@ const converter = async (req, res) => {
             convertingArray.push(await converterCore.convert(session, settings))
         }
 
-        text = convertingArray.reduce((acc, current) => `${acc}<br>${current}`)
-
+        text = convertingArray.reduce((acc, current) => `${acc}<p>${current}</p>`)
+        
         res.send(text)
     } catch (err) {
         res.status(400).send(err)

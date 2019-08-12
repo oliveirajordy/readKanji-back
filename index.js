@@ -7,7 +7,8 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.use('/static',express.static(__dirname+'/static'))
+//rota para download de arquivos para conversão no lado do client
+// app.use('/static',express.static(__dirname+'/static'))
 
 app.post('/converter', converter)
 

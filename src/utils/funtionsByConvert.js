@@ -25,13 +25,26 @@ const tags = [
     '</p>',
     '<p>',
     '<script>',
-    '</script>'
+    '</script>',
+    '<h1>',
+    '<h2>',
+    '<h3>',
+    '<h4>',
+    '<h5>',
+    '<h6>',
+    '</h1>',
+    '</h2>',
+    '</h3>',
+    '</h4>',
+    '</h5>',
+    '</h6>'
 ]
 
 //make global regex for correct replace
 function removeTag(text, tag) {
+    let substitute = tag === '</p>' ? '<br>' : ''
     let regex = new RegExp(tag, 'g')
-    let newText = text.replace(regex, '')
+    let newText = text.replace(regex, substitute)
     return newText
 }
 
@@ -45,6 +58,7 @@ function transformText(text) {
     })
 
     text = text.split('<br>')
+    // text = text.map(textSession => textSession.split('<br>'))
 
     return text
 }
